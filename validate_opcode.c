@@ -1,5 +1,7 @@
 #include "monty.h"
 
+validator_t rq = {0, 0};
+
 /**
  * check_opcode - Check the found command
  * @command: coomand found in the line
