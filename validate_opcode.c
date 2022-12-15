@@ -1,12 +1,11 @@
 #include "monty.h"
 
-validator_t rq = {0, 0};
-
 /**
  * check_opcode - Check the found command
  * @command: coomand found in the line
  * @stack: Top of the stack
  * @n_line: Line that command was found
+ *
  * Return: 1 if command not found, return in opcode var if command was
  * found
  */
