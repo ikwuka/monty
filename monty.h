@@ -5,22 +5,22 @@
 #include <fcntl.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <string>
+#include <string.h>
 #include <ctype.h>
 
 #endif /* _MONTY_ */
 
-#ifndef _MONTY_STRUCTS
-#define _MONTY_STRUCTS
+#ifndef _MONTY_STRUCTS_
+#define _MONTY_STRUCTS_
 
 /**
- * struct stack_s - doubly linked list representation of a stack
+ * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
- * @prev: points to the previous element of the stack
- * @next: points to the next element of the stack
+ * @prev: points to the previous element of the stack (or queue)
+ * @next: points to the next element of the stack (or queue)
  *
  * Description: doubly linked list node structure
- * for stack, queue algorithms - LIFO, FIFO.
+ * for stack, queues, LIFO, FIFO
  *
  */
 typedef struct stack_s
@@ -33,10 +33,10 @@ typedef struct stack_s
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
- * @f: function to the handle the opcode
+ * @f: function to handle the opcode
  *
- * Description: opcode and its function for stack,
- * queue data structures (LIFO and FIFO)
+ * Description: opcode and its function
+ * for stack, queues, LIFO, FIFO
  *
  */
 typedef struct instruction_s
@@ -45,7 +45,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-#endif /* _MONTY_STRUCTS */
+#endif /* _MONTY_STRUCTS_ */
 
 #ifndef _VALIDATOR_
 #define _VALIDATOR_
@@ -65,4 +65,3 @@ typedef struct validator
 extern validator_t rq;
 
 #endif /* VALIDATOR */
-
